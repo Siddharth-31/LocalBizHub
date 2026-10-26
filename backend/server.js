@@ -80,6 +80,23 @@ app.get("/health", async (req, res) => {
 });
 
 
+app.post("/api/enquiries", async (req, res) => {
+  const { business_id, customer_name, customer_email, message } = req.body;
+  if (!business_id || !customer_name || !customer_email || !message) {
+    return res.status(400).json({ error: "All fields are required." });
+  }
+  try {
+    const result = await pool.query(
+      "INSERT INTO enquiries (business_id, customer_name, customer_email, message) VALUES ($1, $2, $3, $4) RETURNING id",
+      [business_id, customer_name, customer_email, message]
+    );
+    res.status(201).json({ message: "Enquiry submitted successfully.", id: result.rows[0].id });
+  } catch (error) {
+    console.error("Enquiry submission failed:", error.message);
+    res.status(500).json({ error: "Failed to submit enquiry." });
+  }
+});
+
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`LocalBizHub API running on port ${PORT}`);
 });
