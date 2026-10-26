@@ -1,0 +1,241 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #172033;
+  background: #fff;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 72px;
+  padding: 16px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #e8eaf0;
+}
+
+.brand {
+  font-size: 23px;
+  font-weight: 800;
+  color: #176b53;
+}
+
+.navbar span,
+.subtitle {
+  color: #697386;
+}
+
+.hero {
+  text-align: center;
+  padding: 78px 20px 68px;
+  background: #f0f7f3;
+}
+
+.eyebrow {
+  color: #176b53;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.12;
+  margin: 20px 0;
+}
+
+.hero > p:not(.eyebrow) {
+  color: #697386;
+  line-height: 1.7;
+}
+
+.search {
+  width: min(600px, 100%);
+  margin-top: 24px;
+  padding: 17px 20px;
+  border: 1px solid #d8dfda;
+  border-radius: 10px;
+  outline-color: #176b53;
+}
+
+.directory {
+  padding: 55px 8% 75px;
+}
+
+.directory h2,
+.enquiry-section h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.business-card {
+  padding: 25px;
+  border: 1px solid #e5e9e7;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(23, 32, 51, 0.04);
+}
+
+.business-icon {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.category {
+  font-size: 12px;
+  color: #176b53;
+  background: #eaf5ef;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+.business-card h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.location,
+.description {
+  color: #697386;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.description {
+  min-height: 48px;
+}
+
+.contact-button,
+.submit-button,
+.cancel-button {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #176b53;
+  font-weight: bold;
+}
+
+.contact-button,
+.submit-button {
+  background: #176b53;
+  color: #fff;
+}
+
+.contact-button {
+  margin-top: 12px;
+}
+
+.contact-button:hover,
+.submit-button:hover {
+  background: #125640;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.enquiry-section {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  padding: 28px;
+  border: 1px solid #e5e9e7;
+  border-radius: 14px;
+}
+
+.enquiry-section form {
+  display: grid;
+  gap: 12px;
+}
+
+.enquiry-section label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.enquiry-section input,
+.enquiry-section textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d8dfda;
+  border-radius: 8px;
+}
+
+.enquiry-section textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.cancel-button {
+  background: #fff;
+  color: #176b53;
+}
+
+.success {
+  color: #176b53;
+}
+
+.error {
+  color: #b42318;
+}
+
+footer {
+  padding: 30px 8%;
+  background: #172033;
+  color: #fff;
+}
+
+footer p {
+  color: #cbd2de;
+  font-size: 14px;
+}
+
+@media (max-width: 750px) {
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 16px 5%;
+  }
+
+  .directory {
+    padding: 40px 5%;
+  }
+
+  .enquiry-section {
+    margin: 0 5% 40px;
+    padding: 20px;
+  }
+}
