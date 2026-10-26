@@ -241,4 +241,11 @@ See `502-troubleshooting-report.md` for the troubleshooting report.
 \- Review AWS resources and charges regularly.
 
 
+## Architecture
+
+
+
+!\[LocalBizHub System Architecture](docs/architecture.png)
+
+
 
